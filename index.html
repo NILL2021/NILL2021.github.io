@@ -1,53 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<title>
-ToastersUnited 
-</title>
-<style>
-* {
-font-family: system-ui;
-}
-body {
-background-color: black;
-}
-.title {
-color: green;
-position: fixed;
-left: 50%;
-font-size: 30px;
-}
-.abt {
-position: absolute;
-left: 50%;
-color: white;
-top: 5%
-border-color: black;
-border-decoration: dashed;
-border-radius: 7px;
-border-color: white;
-}
-</style>
+<meta charset="utf-8">
+<title>Example</title>
+<link rel="stylesheet" href="ess.css">
 </head>
 <body>
-<div class="title"><strong>Hi, I'm ToastersUnited.</strong></div>
-<div class="abt">I'm a programmer and a game developer. I like lua and rust, I hate Javascript (and I don't know why, I guess it's a flaw of mine) 
-I'm currently working on a few projects:
-<br>
-Unnamed mars colony management game - I plan to expand my modelling skills with this project and get my first game on steam.
-<br>
-Intelligence - Ludum Dare 50 submission I am still working on.
-<br>
-Idunno - 3D retro game for a game jam.
-<br>
-A programming language - In java, following a book.
-<br>
-I am self taught and am always expanding my language knowledge.
-<br>
-<a href="suomea.html"> Versio Suomea </a>
-Last Edited: 25/12/1991
-Последнее редактирование: 25.12.1991 
-
+<div class="alert">
+    <span id="fact">PLACEHOLDER</span>
+    <span class="exit-alert" onclick="hide_alert()">&times</span>
+</div>
+<h1>ToastersUnited</h1>
+<p>Welcome! I am ToastersUnited. Here is an example of my work: a site made by me: <a href="https://tabs-scratch.eu.org">TaBS, or Text Based Scratch.</a></p>
+<iframe src="https://tabs-scratch.eu.org" width = 600px height = 500px style="border-style:ridge; border-radius: 4px"></iframe>
+<div class="dropdownaspectos" id="os" onclick="change()"><h1>(Temporary): Aspect OS High Teir Competition <span id="asp">&darr;</span></h1></div>
+<div class="footer" style="text-align: center;">
+    <p>&copy; 2020 ToastersUnited</p><p><a href="https://github.com/NILL2021/nill2021.github.io">Github Repo</a></p><p>This was made entireley in vanilla CSS, JS and HTML.</p>
 </div>
 </body>
+<script>
+    var hint = "Hint: it starts with the letter 7";
+    const facts = {
+        // facts for april. Facts <= 17 can be used again with a new month. 31 can also be used.
+        1: "The first toaster was invented in 1882.",
+        2: "The first toaster that could toast toast was also invented in 1882.",
+        3: "It would be illegal to sell toasters in the United States of South Aisia, if it existed.",
+        4: "Africa is not a burger",
+        5: "All toasters toast toast",
+        6: "Toasters are the best toasters",
+        7: "The Dutch one ate their Toasters/Pancakes/Prime Minister",
+        8: "Meatballs are not toasters, nor are they from Sweden",
+        9: "No one knows where the finnish word for finland (\"Suomi\") comes from.",
+        10: "Only one person in the world can make a toaster",
+        11: "Robux is now worth more than the Russian Rouble",
+        12: "Github Copilot is the best toaster",
+        13: "I can't believe I'm the only one who can make a toaster",
+        14: "GITHUB COPILOT KEEPS GIVING ME FUNNY JOKES AND I CAN'T STOP PRESSING TAB",
+        18: "Wait, I'm not a toaster, I'm a toaster copilot",
+        19: "It is impossible to make a toaster that is not a toaster.",
+        20: "Toasters are the best toasters",
+        21: "Toasters are not the best toasters",
+        21: "Do not eat toasters",
+        22: "This site was originally supposed to be a CSS framework, but it looked like a toaster so now it's my website.",
+        23: "Toasters are actually not the best toasters. Science has proven it.",
+        24: "https://downloads.scratch.mit.edu has a <s>toaster in it</s> unique error message",
+        25: "9 - 1 is 8, not 7, I'M TALKING TO A SPECIFIC PERSON",
+        26: "I plya fnaf vr halp",
+        27: "Lisp programmers be like: ((((I((((( ca((((n(( see(((the brack(((ets(((((((i(((((n(((m(((y((nightma(((res((())))))))))))))))))))))))))))))))))))))))))))))))",
+        28: "Roses are red, violets are blue, I have no idea what I'm doing",
+        29: "It is exactly 8:26PM on the 18/04/2022 as i write this",
+        30: "I am a toaster. End of transmission.",
+        31: "speed",
+    }
+    var open = false
+    function hide_alert() {
+        document.querySelector('.alert').style.display = 'none';
+    }
+    function getFact(day) {
+        return facts[day];
+    }
+
+    let d = new Date();
+    let day = d.getDate();
+    let month = d.getMonth() + 1;
+    let year = d.getFullYear();
+    let fact = getFact(day.toString());
+    document.getElementById('fact').innerHTML = "Fact of the day ("+ day + "/" + month + "/" + year +"): " + fact;
+    
+    function change() {
+
+        console.log("clicked");
+        if(open == false) {
+            open = true;
+            document.getElementById('asp').innerHTML = "&uarr;";
+            document.getElementById("os").innerHTML = document.getElementById("os").innerHTML + "<br><strong>Why you should pick me?</strong><br><p>I have been programming in HTML, CSS and JavaScript since 2017. That's 5 years of expierience. I also know lots of other languages, like python, rust, java, and lua (just to name a few) and have a good knowledge of programming concepts.</p><br><strong>How active am I?</strong><br><p>Recently, i've given myself a challenge to make at least 1 contribution a day to github. The next year I will increase it by one. On scratch, I admit, I haven't been very active lately, but i'm becoming a lot more active in the forums, especially the AT's.</p><br><strong>My differences from others?</strong><br><li>I have lots of expierience, as I said before.</li><li>I have ideas</li><li>I can do a lot, and i'm always open to learning new things. In my eyes, that's what the internet is for.</li><br><strong>Links</strong><p><a href='https://github.com/NILL2021'>Github</a>, <a href='scratch.mit.edu/users/ToastersUnited'>Scratch</a>, mail@screech.eu.org (my non personal email) I've also made a couple games on <a href='https://toastersunited.itch.io/'>itch.io</a></p>";
+        } else {
+            open = false;
+            document.getElementById("os").innerHTML = "<h1>(Temporary): Aspect OS High Teir Competition <span onclick='change' id='asp'>&darr;</span></h1>";
+        }
+    }
+</script>
 </html>

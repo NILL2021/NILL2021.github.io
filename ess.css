@@ -1,0 +1,103 @@
+:root {
+    /* Dark Nord */
+    --bg: #2e3440;
+    --text: #d8dee9;
+    --primary: #8fbcbb;
+    --secondary: #88c0d0;
+    --accent: #81a1c1;
+    --highlight: #5e81ac;
+    --highlight-bg: #3e4c59;
+    --error: #bf616a;
+    --warning: #ebcb8b;
+    --success: #a3be8c;
+    --info: #b48ead;
+    --border: #3b4252;
+    --border-light: #4c566a;
+    --border-dark: #2e3440;
+    --border-darker: #1c2025;
+    --border-darkest: #121417;
+    --border-lightest: #4c566a;
+    --border-lighter: #5e81ac; 
+    --border-lightest-2: #88c0d0;
+    --border-lighter-2: #81a1c1;
+    --border-lighter-3: #a3be8c;
+    --border-lighter-4: #bf616a;
+    --border-lighter-5: #d08770;
+    --border-lighter-6: #ebcb8b;
+    --border-lighter-7: #a3be8c;
+    --border-lighter-8: #88c0d0;
+    --border-lighter-9: #81a1c1;
+    --border-lighter-10: #5e81ac;
+    --border-lighter-11: #4c566a;
+    --border-lighter-12: #3b4252;
+    --border-lighter-13: #2e3440;
+    --border-lighter-14: #1c2025;
+    --border-lighter-15: #121417;
+    --border-lighter-16: #4c566a;
+    --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.alert {
+    background-color: var(--error);
+    color: var(--text);
+    border-color: var(--border-lighter-5);
+    border-width: 5px;
+    border-radius: 4px;
+    padding: .5rem 1rem;
+    margin-bottom: 1rem;
+    box-shadow: #2e3440 0px 0px 0px 1px inset;
+}
+
+.exit-alert {
+    left: 95%;
+    position: absolute;
+    /* Put it in the right center */
+    line-height: 5px;
+
+}
+
+html {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--font-family);
+}
+
+.input {
+    background-color: var(--highlight);
+    color: var(--text);
+    border-radius: 4px;
+    padding: .5rem 1rem;
+    margin-bottom: 1rem;
+    font-size: medium;
+    border-style: none;
+}
+.accept {
+    background-color: var(--border-lightest);
+    color: var(--text);
+    border-radius: 4px;
+    padding: .5rem 1rem;
+    margin-bottom: 1rem;
+    font-size: medium;
+    border-style: none;
+}
+
+.hint {
+    background-color: var(--border-lighter-12);
+    color: var(--text);
+    border-radius: 4px;
+    padding: .5rem 1rem;
+    margin-bottom: 1rem;
+    font-size: medium;
+    border-style: none;
+}
+.dropdownaspectos {
+    background-color: var(--border-lighter-12);
+    color: var(--text);
+    width: 90%;
+    border-radius: 4px;
+    padding: .5rem 1rem;
+    margin-bottom: 1rem;
+    font-size: medium;
+    border-style: none;
+}
